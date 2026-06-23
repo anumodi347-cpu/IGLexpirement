@@ -1,5 +1,66 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // --- Preloader Logic ---
+    const preloader = document.getElementById('preloader');
+    const preloaderProgress = document.getElementById('preloader-progress');
+    
+    if (preloader) {
+        const mediaElements = [
+            ...document.querySelectorAll('img'),
+            ...document.querySelectorAll('video')
+        ];
+        
+        let loadedMediaCount = 0;
+        const totalMediaCount = mediaElements.length;
+
+        const finishLoading = () => {
+            if (preloaderProgress) preloaderProgress.textContent = `100%`;
+            setTimeout(() => {
+                preloader.classList.add('fade-out');
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                    // Trigger initial scroll animations if necessary
+                    if (typeof checkScroll === 'function') checkScroll();
+                }, 800);
+            }, 300);
+        };
+
+        const incrementProgress = () => {
+            loadedMediaCount++;
+            if (preloaderProgress) {
+                const percentage = Math.floor((loadedMediaCount / totalMediaCount) * 100);
+                preloaderProgress.textContent = `${percentage}%`;
+            }
+            if (loadedMediaCount >= totalMediaCount) {
+                finishLoading();
+            }
+        };
+
+        if (totalMediaCount === 0) {
+            finishLoading();
+        } else {
+            mediaElements.forEach(media => {
+                if (media.tagName === 'IMG') {
+                    if (media.complete) {
+                        incrementProgress();
+                    } else {
+                        media.addEventListener('load', incrementProgress);
+                        media.addEventListener('error', incrementProgress);
+                    }
+                } else if (media.tagName === 'VIDEO') {
+                    if (media.readyState >= 3) { // HAVE_FUTURE_DATA
+                        incrementProgress();
+                    } else {
+                        media.addEventListener('canplay', incrementProgress);
+                        media.addEventListener('error', incrementProgress);
+                    }
+                }
+            });
+            // Fallback timeout just in case something hangs
+            setTimeout(finishLoading, 8000);
+        }
+    }
+
     // --- Header Scroll Effect ---
     const header = document.querySelector('.main-header');
     window.addEventListener('scroll', () => {
