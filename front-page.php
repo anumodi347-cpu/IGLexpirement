@@ -1,61 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IGL Potable Spirits — Raising the Bar for India’s Premium Pour</title>
-    <meta name="description" content="Explore the Potable Spirits division of India Glycols Limited (IGL) — combining manufacturing scale, regional dominance, and premiumization momentum.">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+<?php get_header(); ?>
 
-    <!-- Preloader -->
-    <div id="preloader" class="preloader">
-        <div class="preloader-content">
-            <img src="assets/PotableSpiritsLogo.svg" alt="IGL Potable Spirits" class="preloader-logo">
-            <div class="preloader-spinner"></div>
-            <div class="preloader-text">Loading the experience... <span id="preloader-progress">0%</span></div>
-        </div>
-    </div>
-    <!-- Sticky Header -->
-    <header class="main-header">
-        <div class="container header-container">
-            <a href="#" class="logo-area">
-                <img src="assets/PotableSpiritsLogo.svg" alt="IGL Potable Spirits Logo" class="logo-img">
-            </a>
-            <nav class="nav-links">
-                <a href="#manufacturing">Our Distillery</a>
-                <a href="#portfolio">The Process</a>
-                <a href="#legacy">Our Story</a>
-                <a href="#investor-snapshot">Articles</a>
-                <a href="#contact">Contact</a>
-            </nav>
-            <button class="mobile-nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </header>
-
-    <!-- Mobile Navigation Menu -->
-    <div class="mobile-nav-menu">
-        <a href="#manufacturing" class="mobile-link">Our Distillery</a>
-        <a href="#portfolio" class="mobile-link">The Process</a>
-        <a href="#legacy" class="mobile-link">Our Story</a>
-        <a href="#investor-snapshot" class="mobile-link">Articles</a>
-        <a href="#contact" class="mobile-link">Contact</a>
-    </div>
-
-    <!-- Hero Section with Background Video -->
+<!-- Hero Section with Background Video -->
     <section class="hero-section hero-video-bg">
         <video autoplay muted loop playsinline class="hero-video">
-            <source src="assets/Fields%20swaying.mp4" type="video/mp4">
+            <source src="<?php echo get_template_directory_uri(); ?>/assets/Fields%20swaying.mp4" type="video/mp4">
         </video>
         <div class="hero-video-overlay"></div>
         <div class="container hero-container-center fade-in-up">
@@ -148,7 +96,7 @@
                 </div>
                 <div class="showcase-media">
                     <video autoplay muted loop playsinline class="showcase-video">
-                        <source src="assets/1.mp4" type="video/mp4">
+                        <source src="<?php echo get_template_directory_uri(); ?>/assets/1.mp4" type="video/mp4">
                     </video>
                 </div>
             </div>
@@ -168,7 +116,7 @@
                 </div>
                 <div class="showcase-media">
                     <video autoplay muted loop playsinline class="showcase-video">
-                        <source src="assets/2.mp4" type="video/mp4">
+                        <source src="<?php echo get_template_directory_uri(); ?>/assets/2.mp4" type="video/mp4">
                     </video>
                 </div>
             </div>
@@ -189,7 +137,7 @@
                 </div>
                 <div class="showcase-media">
                     <video autoplay muted loop playsinline class="showcase-video">
-                        <source src="assets/3.mp4" type="video/mp4">
+                        <source src="<?php echo get_template_directory_uri(); ?>/assets/3.mp4" type="video/mp4">
                     </video>
                 </div>
             </div>
@@ -199,7 +147,7 @@
     <!-- Manufacturing Section -->
     <section id="manufacturing" class="mfg-section scroll-reveal">
         <video autoplay muted loop playsinline class="mfg-video-bg">
-            <source src="assets/whisky%20in%20glass.mp4" type="video/mp4">
+            <source src="<?php echo get_template_directory_uri(); ?>/assets/whisky%20in%20glass.mp4" type="video/mp4">
         </video>
         <div class="mfg-overlay"></div>
         <div class="container mfg-container">
@@ -210,7 +158,7 @@
             <div class="mfg-grid">
                 <div class="mfg-card">
                     <div class="mfg-image-wrapper">
-                        <img src="assets/premium_distillery.png" alt="Distillery Infrastructure">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/premium_distillery.png" alt="Distillery Infrastructure">
                     </div>
                     <div class="mfg-content">
                         <h3>Dual Distillery Infrastructure</h3>
@@ -219,7 +167,7 @@
                 </div>
                 <div class="mfg-card">
                     <div class="mfg-image-wrapper">
-                        <img src="assets/Bunty%20Whisky0331.jpg" alt="Supply Chain">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/Bunty%20Whisky0331.jpg" alt="Supply Chain">
                     </div>
                     <div class="mfg-content">
                         <h3>Self-Sufficient Supply Chain</h3>
@@ -228,7 +176,7 @@
                 </div>
                 <div class="mfg-card">
                     <div class="mfg-image-wrapper">
-                        <img src="assets/amazing_vodka_bottle.png" alt="Co-Packing Alliance">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/amazing_vodka_bottle.png" alt="Co-Packing Alliance">
                     </div>
                     <div class="mfg-content">
                         <h3>Global Co-Packing Alliance</h3>
@@ -339,7 +287,7 @@
 
     <section id="legacy" class="timeline-section scroll-reveal">
         <video autoplay muted loop playsinline class="timeline-video-bg">
-            <source src="assets/Hand barrel.mp4" type="video/mp4">
+            <source src="<?php echo get_template_directory_uri(); ?>/assets/Hand barrel.mp4" type="video/mp4">
         </video>
         <div class="container">
             <div class="section-header text-center">
@@ -821,7 +769,7 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-content card-with-image">
                         <div class="timeline-image-container">
-                            <img src="assets/premium_distillery.png" alt="Distillery Commissioning">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/premium_distillery.png" alt="Distillery Commissioning">
                         </div>
                         <div class="timeline-text-container">
                             <span class="timeline-year">1999</span>
@@ -839,7 +787,7 @@
                             <p>Established direct bottling integration. Commenced the domestic country liquor and economy alcobev business.</p>
                         </div>
                         <div class="timeline-image-container">
-                            <img src="assets/Bunty Whisky0331.jpg" alt="Bottling & IMFL Launch">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/Bunty Whisky0331.jpg" alt="Bottling & IMFL Launch">
                         </div>
                     </div>
                 </div>
@@ -847,7 +795,7 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-content card-with-image">
                         <div class="timeline-image-container">
-                            <img src="assets/alchol8667.jpg" alt="Gorakhpur Distillery">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/alchol8667.jpg" alt="Gorakhpur Distillery">
                         </div>
                         <div class="timeline-text-container">
                             <span class="timeline-year">2006</span>
@@ -865,7 +813,7 @@
                             <p>Initiated our co-packing alliance with Bacardi, handling localized production, maturation, and regulatory compliance.</p>
                         </div>
                         <div class="timeline-image-container">
-                            <img src="assets/alchol4472.jpg" alt="The Bacardi Alliance">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/alchol4472.jpg" alt="The Bacardi Alliance">
                         </div>
                     </div>
                 </div>
@@ -873,7 +821,7 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-content card-with-image">
                         <div class="timeline-image-container">
-                            <img src="assets/amazing_vodka_bottle.png" alt="Premium IMFL Launch">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/amazing_vodka_bottle.png" alt="Premium IMFL Launch">
                         </div>
                         <div class="timeline-text-container">
                             <span class="timeline-year">2021</span>
@@ -891,7 +839,7 @@
                             <p>Signed a strategic co-branding and production alliance with Amrut. Launched MaQintosh Special Edition and Old Port Rum.</p>
                         </div>
                         <div class="timeline-image-container">
-                            <img src="assets/zumba_rum_bottle.png" alt="Amrut Distilleries Alliance">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/zumba_rum_bottle.png" alt="Amrut Distilleries Alliance">
                         </div>
                     </div>
                 </div>
@@ -899,7 +847,7 @@
                     <div class="timeline-dot"></div>
                     <div class="timeline-content card-with-image">
                         <div class="timeline-image-container">
-                            <img src="assets/alchol5532.jpg" alt="₹1,331 Cr Revenue Landmark">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/alchol5532.jpg" alt="₹1,331 Cr Revenue Landmark">
                         </div>
                         <div class="timeline-text-container">
                             <span class="timeline-year">2026</span>
@@ -924,7 +872,7 @@
                 <div class="flip-card-item">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="assets/hero_whisky_bottle.png" alt="Single Reserve Whisky">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/hero_whisky_bottle.png" alt="Single Reserve Whisky">
                         </div>
                         <div class="flip-card-back">
                             <span class="card-brand-cat">Oak-Cask aged</span>
@@ -938,7 +886,7 @@
                 <div class="flip-card-item">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="assets/amazing_vodka_bottle.png" alt="Amazing Vodka">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/amazing_vodka_bottle.png" alt="Amazing Vodka">
                         </div>
                         <div class="flip-card-back">
                             <span class="card-brand-cat">Five-Times Filtered</span>
@@ -952,7 +900,7 @@
                 <div class="flip-card-item">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="assets/zumba_rum_bottle.png" alt="Zumba Spiced Rum">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/zumba_rum_bottle.png" alt="Zumba Spiced Rum">
                         </div>
                         <div class="flip-card-back">
                             <span class="card-brand-cat">Tropical Spiced</span>
@@ -966,7 +914,7 @@
                 <div class="flip-card-item">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="assets/alchol1373.jpg" alt="Amrut MaQintosh Whisky">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/alchol1373.jpg" alt="Amrut MaQintosh Whisky">
                         </div>
                         <div class="flip-card-back">
                             <span class="card-brand-cat">Premium Blend</span>
@@ -980,7 +928,7 @@
                 <div class="flip-card-item">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="assets/Bunty Whisky0331.jpg" alt="Bunty Special Whisky">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/Bunty Whisky0331.jpg" alt="Bunty Special Whisky">
                         </div>
                         <div class="flip-card-back">
                             <span class="card-brand-cat">High-Volume Value</span>
@@ -994,7 +942,7 @@
                 <div class="flip-card-item">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="assets/alchol5563.jpg" alt="Bunty Bubbly Country Liquor">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/alchol5563.jpg" alt="Bunty Bubbly Country Liquor">
                         </div>
                         <div class="flip-card-back">
                             <span class="card-brand-cat">Market Leader</span>
@@ -1007,61 +955,5 @@
             </div>
         </div>
     </section>
-    <!-- Footer -->
-    <footer id="contact" class="footer-area">
-        <div class="container footer-grid">
-            <div class="footer-brand">
-                <h4>IGL Potable Spirits</h4>
-                <p>A Division of India Glycols Limited</p>
-                <small>&copy; 2026 India Glycols Limited. All rights reserved.</small>
-            </div>
-            <div class="footer-links">
-                <h5>Information</h5>
-                <a href="#investor-snapshot">Financial Snapshot</a>
-
-                <a href="#portfolio">Brand Portfolio</a>
-            </div>
-            <div class="footer-contact">
-                <h5>Investor Relations</h5>
-                <p>Email: ir@indiaglycols.com</p>
-                <p>Noida Office: Plot No. 2B, Sector-126, Noida, UP</p>
-                <small class="disclaimer">Please enjoy responsibly. For corporate, institutional, and boardroom review only.</small>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Investor Modal -->
-    <div class="investor-modal-overlay">
-        <div class="investor-modal">
-            <button class="modal-close-btn" aria-label="Close modal">&times;</button>
-            <div class="modal-header">
-                <h3>Request Investor Pack</h3>
-                <p>Please enter your professional coordinates below to receive IGL's Potable Spirits division investor kit, analyst logs, and FY26 projections.</p>
-            </div>
-            <form class="investor-form" id="investorForm">
-                <div class="form-group">
-                    <label for="fullName">Full Name</label>
-                    <input type="text" id="fullName" required placeholder="e.g. Vikram Sharma">
-                </div>
-                <div class="form-group">
-                    <label for="corporateEmail">Corporate Email</label>
-                    <input type="email" id="corporateEmail" required placeholder="e.g. v.sharma@firmname.com">
-                </div>
-                <div class="form-group">
-                    <label for="firmName">Institution / Firm Name</label>
-                    <input type="text" id="firmName" required placeholder="e.g. Trident Asset Management">
-                </div>
-                <button type="submit" class="btn btn-gold btn-block">Download Investor Pack</button>
-            </form>
-            <div class="modal-success-message" style="display: none;">
-                <div class="success-icon">✓</div>
-                <h4>Submission Successful</h4>
-                <p>We have sent the FY26 IGL Potable Spirits Division Investor Kit to your email coordinates.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Script File -->
-    <script src="app.js"></script>
-</body>
-</html>
+    
+<?php get_footer(); ?>
